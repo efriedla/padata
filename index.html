@@ -17,18 +17,24 @@
 
         var circles = [];
         function onKeyDown(event) {
-          if(event.key === "a"){
-            soundA.play();
-          }
-          if ( event.key === "b"){
-            soundB.play();
-          }
+         
           
             var maxPoint = new Point(view.size.width, view.size.height);
             var randomPoint = Point.random();
             var point = maxPoint * randomPoint;
             var lilCircles = new Path.Circle(new Point(point), 500);
             lilCircles.fillColor = 'yellow';
+
+            if(event.key === "a"){
+              soundA.play();
+              lilCircles.fillColor = 'blue';
+            }
+            if ( event.key === "b"){
+              soundB.play();
+              lilCircles.fillColor = 'purple';
+            }
+            
+            
             circles.push(lilCircles);
             console.log(point);
         }
