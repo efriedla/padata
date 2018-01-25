@@ -9,13 +9,20 @@
         
         function onKeyDown(event) {
             var maxPoint = new Point(view.size.height, view.size.width);
-            console.log(maxPoint);
+            
             var randomPoint = Point.random();
             var point = maxPoint * randomPoint;
             new Path.Circle(new Point(point), 20).fillColor = 'yellow';
+            console.log(point);
         }
         
+       
+        var animateCircle = new Path.Circle(new Point(100,100), 60);
+        animateCircle.fillColor = 'red';
         
+        function onFrame(event) {
+            animateCircle.fillColor.hue += 1;
+        }
     </script>
   </head>
   <body>
