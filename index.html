@@ -6,15 +6,24 @@
     <title>padata</title>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <script type="text/paperscript" canvas="myCanvas">
-      var sound = new Howl({
+      var soundA = new Howl({
         src: ['sounds/bubbles.mp3']
+      });
+      var soundB = new Howl({
+        src: ['sounds/clay.mp3']
       });
       
       
 
         var circles = [];
         function onKeyDown(event) {
-          sound.play();
+          if(event.key === "a"){
+            soundA.play();
+          }
+          if ( event.key === "b"){
+            soundB.play();
+          }
+          
             var maxPoint = new Point(view.size.width, view.size.height);
             var randomPoint = Point.random();
             var point = maxPoint * randomPoint;
