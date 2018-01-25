@@ -9,6 +9,8 @@
 ## step 4 scale down each frame
 - animateCircle.scale(.9);
 ## step 5 get little circles to change colors
-- Make those circles into a variable  var lilCircles ::: new Path.Circle(new Point(point), 20);
-    - Then change thier color, because before it was only pushing in the color yellow::: lilCircles.fillColor = 'yellow';
+- Make those circles into a variable ::: var lilCircles = new Path.Circle(new Point(point), 20);
+    - Then change thier color, because before it was only pushing in the color yellow: :: lilCircles.fillColor = 'yellow';
     - Push the little circles into an array ::: circles.push(lilCircles);
+
+- allow circles to decrease in scale like the animateCircle did and delete the animateCircle 

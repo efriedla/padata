@@ -11,22 +11,18 @@
             var maxPoint = new Point(view.size.width, view.size.height);
             var randomPoint = Point.random();
             var point = maxPoint * randomPoint;
-            var lilCircles = new Path.Circle(new Point(point), 20);
+            var lilCircles = new Path.Circle(new Point(point), 500);
             lilCircles.fillColor = 'yellow';
             circles.push(lilCircles);
             console.log(point);
         }
         
-       
-        var animateCircle = new Path.Circle(new Point(100,100), 60);
-        animateCircle.fillColor = 'red';
         
         function onFrame(event) {
             for(var i = 0; i < circles.length; i++){
                circles[i].fillColor.hue += 1;
+               circles[i].scale(.9);
             }
-            animateCircle.fillColor.hue += 1;
-            //animateCircle.scale(.9);
         }
     </script>
   </head>
