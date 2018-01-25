@@ -195,10 +195,9 @@
           
           var rectangle = new Rectangle(new Point(point), new Point(500));
           var cornerSize = new Size(20, 20);
-          var lilCircles = new Path.RoundRectangle(rectangle, cornerSize);
-          //path.fillColor = 'white';
+          //var lilCircles = new Path.RoundRectangle(rectangle, cornerSize);
           
-          //var lilCircles = new Path.Circle(new Point(point), 500);
+          var lilCircles = new Path.Circle(new Point(point), 500);
           lilCircles.fillColor = keyData[event.key].color;
           keyData[event.key].sound.play();
           circles.push(lilCircles);
@@ -211,7 +210,7 @@
             for(var i = 0; i < circles.length; i++){
                circles[i].fillColor.hue += 1;
                circles[i].scale(.9);
-               circles[i].rotate(7);
+               //circles[i].rotate(7);
                if(circles[i].area < 1){
                 circles[i].remove(); // remove the circle from the canvas
                 circles.splice(i, 1); // remove the circle from the array
