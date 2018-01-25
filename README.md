@@ -21,3 +21,7 @@ var sound = new Howl({
 # differenct shapes
 ### With circles
 ![Alt text](http://g.recordit.co/GvW15betvn.gif)
+### With squares
+![Alt text](http://g.recordit.co/Ya8qdPqDEN.gif)
+### With rotating squares
+![Alt text](http://g.recordit.co/Adbp2mcyCF.gif)
