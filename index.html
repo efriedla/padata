@@ -8,8 +8,7 @@
     <script type="text/paperscript" canvas="myCanvas">
         var circles = [];
         function onKeyDown(event) {
-            var maxPoint = new Point(view.size.height, view.size.width);
-            
+            var maxPoint = new Point(view.size.width, view.size.height);
             var randomPoint = Point.random();
             var point = maxPoint * randomPoint;
             var lilCircles = new Path.Circle(new Point(point), 20);

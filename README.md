@@ -1,10 +1,14 @@
-# step 1 drawing a square
+## step 1 drawing a square
 - new Path.Circle(new Point(100, 100), 10).fillColor = 'yellow';
-# step 2 finding max height and width of page
+## step 2 finding max height and width of page
 - view.size.height, view.size.width
-# step 3 able to change color of circle 
+## step 3 able to change color of circle 
 - function onFrame(event) {
             animateCircle.fillColor.hue += 1;
         }
-# step 4 scale down each frame
+## step 4 scale down each frame
 - animateCircle.scale(.9);
+## step 5 get little circles to change colors
+- Make those circles into a variable  var lilCircles ::: new Path.Circle(new Point(point), 20);
+    - Then change thier color, because before it was only pushing in the color yellow::: lilCircles.fillColor = 'yellow';
+    - Push the little circles into an array ::: circles.push(lilCircles);
