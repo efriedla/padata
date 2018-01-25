@@ -10,12 +10,16 @@
         var path = new Path();
         // Give the stroke a color
         path.strokeColor = 'black';
-        var start = new Point(100, 100);
+        var start = new Point(0, 100);
         // Move to start and draw a line from there
         path.moveTo(start);
         // Note the plus operator on Point objects.
         <!-- // PaperScript does that for us, and much more! -->
-        path.lineTo(start + [ 100, -50 ]);
+        path.lineTo(start + [ 1000, 250 ]);
+        var myCircle = new Path.Circle(new Point(100, 70), 50);
+        myCircle.fillColor = 'yellow';
+        var myCircleTwo = new Path.Circle(new Point(50, 100), 10);
+        myCircleTwo.fillColor = 'pink';
     </script>
   </head>
   <body>
