@@ -6,8 +6,15 @@
     <title>padata</title>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <script type="text/paperscript" canvas="myCanvas">
+      var sound = new Howl({
+        src: ['sounds/bubbles.mp3']
+      });
+      
+      
+
         var circles = [];
         function onKeyDown(event) {
+          sound.play();
             var maxPoint = new Point(view.size.width, view.size.height);
             var randomPoint = Point.random();
             var point = maxPoint * randomPoint;
@@ -31,8 +38,9 @@
 
     <canvas id="myCanvas" resize></canvas>
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="js/paper-full.js"></script>
-    <script src="js/jquery.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/paper-full.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.8/howler.core.min.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
   </body>
 </html>

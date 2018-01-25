@@ -14,3 +14,7 @@
     - Push the little circles into an array ::: circles.push(lilCircles);
 
 - allow circles to decrease in scale like the animateCircle did and delete the animateCircle 
+## step 6 add in howler.js and play a sound onkeypress.
+var sound = new Howl({
+        src: ['sounds/bubbles.mp3']
+      });
