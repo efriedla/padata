@@ -6,37 +6,39 @@
     <title>padata</title>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <script type="text/paperscript" canvas="myCanvas">
-      var soundA = new Howl({
-        src: ['sounds/bubbles.mp3']
-      });
-      var soundB = new Howl({
-        src: ['sounds/clay.mp3']
-      });
+      var keyData = {
+        
+          a: {
+          color: 'blue',
+          sound: new Howl({
+            src: ['sounds/bubbles.mp3']
+          })
+          
+        },
+          b: {
+          color: 'purple',
+          sound: new Howl({
+            src: ['sounds/clay.mp3']
+          })
+          
+        },
+         
+      }
       
       
 
         var circles = [];
         function onKeyDown(event) {
-         
-          
-            var maxPoint = new Point(view.size.width, view.size.height);
-            var randomPoint = Point.random();
-            var point = maxPoint * randomPoint;
-            var lilCircles = new Path.Circle(new Point(point), 500);
-            lilCircles.fillColor = 'yellow';
+         if(keyData[event.key]){
+          var maxPoint = new Point(view.size.width, view.size.height);
+          var randomPoint = Point.random();
+          var point = maxPoint * randomPoint;
+          var lilCircles = new Path.Circle(new Point(point), 500);
+          lilCircles.fillColor = keyData[event.key].color;
+          keyData[event.key].sound.play();
+          circles.push(lilCircles);
 
-            if(event.key === "a"){
-              soundA.play();
-              lilCircles.fillColor = 'blue';
-            }
-            if ( event.key === "b"){
-              soundB.play();
-              lilCircles.fillColor = 'purple';
-            }
-            
-            
-            circles.push(lilCircles);
-            console.log(point);
+         }
         }
         
         
@@ -55,7 +57,7 @@
     
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/paper-full.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.8/howler.core.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.8/howler.js"></script>
     <script type="text/javascript" src="js/jquery.js"></script>
   </body>
 </html>
