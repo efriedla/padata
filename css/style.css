@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Exo');
 canvas{
     width: 100%;
     background: black;
@@ -7,11 +8,13 @@ canvas{
 body, html{
     height: 100%;
     margin: 0;
+    
 }
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Exo', sans-serif;
   }
   .instructions{
     border: solid;
