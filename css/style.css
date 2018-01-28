@@ -8,3 +8,26 @@ body, html{
     height: 100%;
     margin: 0;
 }
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  .instructions{
+    border: solid;
+    margin-top: 10%;
+    padding: 50px;
+    z-index: 2; 
+    background-color: rgb(12, 10, 10);
+    position: fixed;
+    width: 100%;
+  }
+  #instructions{
+    width: 100%;
+    background-color: gray;
+    padding: 15px;
+    border: 1px black solid;
+    color: rgb(230, 227, 227);
+    font-size: 25px;
+    
+  }

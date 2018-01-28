@@ -1,4 +1,4 @@
 $( window ).hover(function() {
     // Run code
-    $(".instructions").fadeOut(4000);
+    $(".instructions").fadeOut(5000);
   });
