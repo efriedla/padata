@@ -26,3 +26,5 @@ var sound = new Howl({
 ![Alt text](http://g.recordit.co/Ya8qdPqDEN.gif)
 ### With rotating squares
 ![Alt text](http://g.recordit.co/Adbp2mcyCF.gif)
+### Instructions will disapear after 5 secounds
+![Alt text](http://g.recordit.co/DUDOqJ5kRo.gif)
